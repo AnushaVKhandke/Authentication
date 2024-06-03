@@ -1,0 +1,51 @@
+h2{
+    text-align: center;
+    color: rgb(22, 85, 106);
+}
+.container{
+    width: 600px;
+    background-color: lightblue;
+    margin: 30px auto;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+}
+.form-area{
+    display: flex;
+    flex-direction: column;
+   
+}
+input[type=text],[type=email]{
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+select{
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+input[type=radio]{
+    display: inline;
+    flex-direction:column;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+
+}
+input[type=submit]{
+    margin-top: 20px;
+    background-color: rgb(112, 221, 112);
+    padding: 10px 100px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}

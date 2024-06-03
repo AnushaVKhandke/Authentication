@@ -1,0 +1,26 @@
+.container {
+   width: 800px;
+   margin: 0 auto; 
+   font-family:Arial, Helvetica, sans-serif;
+ }
+ 
+ .header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: tomato;
+   padding: 10px;
+   color: white;
+ }
+ 
+ .header h2 {
+   margin: 0;
+ }
+ 
+  a {
+   margin-left: 10px; 
+   text-decoration: none;
+   color: white;
+   padding: 20px;
+ }
+ 

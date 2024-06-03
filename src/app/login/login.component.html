@@ -1,0 +1,22 @@
+<div class="main">
+<div class="container">
+    <app-snackbar [errorMsg]="errorMsg" *ngIf="errorMsg"></app-snackbar>
+  <app-loader *ngIf="isLoading"></app-loader>
+    <h2>{{isLoggedIn ? 'Login' : 'Signup'}} Here</h2>
+    <form class="form-area" #auth="ngForm" (ngSubmit)="onSubmitted(auth)"  *ngIf="!isLoading">
+        
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="email address" ngModel required>
+        
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="password" ngModel required minlength="3">
+        
+        
+       <button type="submit" class="submit" [disabled]="auth.invalid">{{isLoggedIn ? 'Login' : 'Signup'}}</button>
+
+        <p>{{isLoggedIn ? 'Do not have an account yet?' : 'Already have an account'}}
+            <button type="button" class="register" (click)="onSwitch()"><b>{{isLoggedIn ? 'Register here' : 'Login Here'}}</b></button>
+        </p>
+    </form>
+</div>
+</div>

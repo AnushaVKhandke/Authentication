@@ -1,0 +1,63 @@
+<div class="main-area">
+<div class="content-area">
+    <div class="header">
+        <h1>Manage Products</h1>
+        
+        <hr>
+    </div>
+    <div class="container">
+        <div class="form-area">
+            <h2><b>Create Products</b></h2>
+            <form #productsForm="ngForm" (ngSubmit)="onProductCreate(productsForm.value)">
+                <label>Product Name:</label><br>
+                <input type="text" name="pname" ngModel><br>
+
+                <label>Product Description</label><br>
+                <input type="text" name="desc" ngModel><br>
+
+                <label>Product Price</label><br>
+                <input type="text" name="price" ngModel><br>
+
+                <input type="submit" value="{{editmode ? 'Update Product': 'Add Product'}}">
+            </form>
+        </div>
+
+        <div class="product-display-area">
+            <h2><b>All Products</b></h2>
+            <table id="Products">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+
+                <tr *ngIf="allProducts.length < 1 && !isFetching">
+                    <td colspan="4" >No Products Are Available</td>
+                </tr>
+
+                <tr *ngIf="errormsg">
+                    <td colspan="4" >{{errormsg}}</td>
+                </tr>
+
+                <tr *ngIf="isFetching && !errormsg">
+                    <td colspan="4" >Loading.....</td>
+                </tr>
+
+                <tr *ngFor="let p of allProducts; index as i">
+                   <td>{{i+1}}</td>
+                   <td>{{p.pname}}</td>
+                   <td>{{p.desc}}</td>
+                   <td>{{p.price}} </td>
+                   <td><button (click)="onDeleteProduct(p.id)">Delete</button></td>
+                   <td><button (click)="onEditProduct(p.id)">Edit</button></td>
+                   
+                </tr>
+            </table>
+            <button value="Fetch Product" (click)="onFetchProducts()">Fetch Product</button>
+            <button value="Clear Product" (click)="onDeleteAllProduct()">Clear Product</button>
+           
+        </div>
+    </div>
+</div>
+</div>

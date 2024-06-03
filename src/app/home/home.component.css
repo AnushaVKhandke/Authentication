@@ -1,0 +1,29 @@
+.img {
+   background: url("img.png") no-repeat;
+   width: 800px;
+   height: 100vh;
+   background-size: cover;
+   background-position: center;
+   position: fixed;
+ }
+ 
+ .center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   color: rgb(34, 131, 131);
+   font-size: xx-large;
+   font-weight: 500;
+   font-family:Georgia, 'Times New Roman', Times, serif;
+ }
+ 
+ .title {
+   text-align: center;
+ }
+ 
+ .title h1,
+ .title h2 {
+   margin: 0;
+ }
+ 

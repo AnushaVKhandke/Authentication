@@ -1,0 +1,44 @@
+.container{
+    width: 400px;
+    background-color:aliceblue;
+    border-radius: 10px;
+    margin: 30px auto;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+input{
+    padding: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    
+}
+.submit{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+.form-area{
+    display: flex;
+    flex-direction: column;
+}
+.register{
+    border: none;
+    background-color: aliceblue;
+    color: rgb(16, 126, 163);
+}
+.img {
+    background: url("img1.png") no-repeat;
+    width: 800px;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+  }
+  .main{
+    margin-top: 0;
+    width: 800px;
+    background-color:rgb(189, 234, 234); ;
+  }

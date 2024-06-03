@@ -1,0 +1,54 @@
+<div class="container">
+    <h2>Registration Form</h2>
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+ <div class="form-area">
+    
+         <label for="">First Name:</label>
+        <input type="text" id="fname" placeholder="enter your first name" formControlName="firstname">
+
+        <label for="">Last Name:</label>
+        <input type="text" id="lname" placeholder="enter your last name" formControlName="lastname">
+
+        <label for="">Email:</label>
+        <input type="email" id="fname" placeholder="enter your mail" formControlName="email">
+        <div>
+            <span style="color: red;" *ngIf="!reactiveForm.get('email').valid">Invalid Email</span>
+        </div>
+   
+        
+
+        <label for="">Country:</label>
+        <select name="country" id="country" formControlName="country">
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="japan">Japan</option>
+        </select>
+    </div>
+        <div class="radio">
+            <label for="">Gender: </label>
+            <input type="radio" value="male" id="male" formControlName="gender">
+            <label for="">Male</label>
+            <input type="radio" value="female" id="female" formControlName="gender">
+            <label for="">Female</label>
+            <input type="radio" value="other" id="other" formControlName="gender">
+            <label for="">Other</label>
+    
+        </div>
+        
+        <div>
+            <label for="">Hobbies: </label>
+            <label for="">Music</label>
+            <input type="checkbox" value="music" id="music" name="music">
+            <label for="">Sports</label>
+            <input type="checkbox" value="sports" id="sports" name="sports">
+            <label for="">Movie</label>
+            <input type="checkbox" value="movie" id="movie" name="movie">
+        </div>
+
+        <input type="submit" value="Submit">
+    </form>
+        
+
+
+   
+</div>

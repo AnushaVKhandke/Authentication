@@ -1,0 +1,15 @@
+<div class="container">
+    <header class="header">
+      <h2>eLearning</h2>
+      <nav>
+        <a routerLink="home">Home</a>
+        <a routerLink="product" *ngIf="isLoggedIn">Products</a>
+        <a routerLink="login" *ngIf="!isLoggedIn">Login</a>
+        <a *ngIf="isLoggedIn" (click)="onLogout()">Logout</a>
+      </nav>
+    </header>
+    <div>
+      
+      <router-outlet></router-outlet>
+    </div>
+  </div>

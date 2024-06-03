@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+
+.main-area{
+    width: 800px;
+    display: flex;
+    background-color: rgb(189, 234, 234);
+    margin: 0;
+}
+.container{
+    display: flex;
+    column-gap: 200px;
+    box-sizing: border-box;
+}
+.header{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.form-area{
+   padding: 10px 20px;
+}
+input[type=text]{
+  margin-bottom: 20px;
+}
+h2{
+    color: rgb(35, 128, 159);
+    font-weight: 600;
+}
+th{
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+tr{
+    padding: 10px;
+}
+input[type=submit]{
+    background-color:teal;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+h1{
+    color: rgb(35, 128, 159);
+    font-weight: 600;
+}
